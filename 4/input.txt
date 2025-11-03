@@ -1,0 +1,56 @@
+This is a sample text file for the CRC-12 lab examination.
+The purpose of this file is to provide a data source of not less than 1KB.
+This lab requires us to implement error detection using Cyclic Redundancy Check.
+
+We will read this file in chunks of 100 bytes.
+For each chunk, we will perform the following steps:
+
+Convert the 100-byte data into an 800-bit binary string.
+
+Append 12 '0's to this binary string, representing the 12-bit CRC.
+
+Perform modulo-2 division using the generator polynomial: z^12 + z^11 + z^3 + z^2 + z + 1.
+
+The 12-bit remainder from this division is our CRC checksum.
+
+We will append this CRC checksum to the original 100-byte data.
+
+This forms the "frame" that will be transmitted.
+
+The receiver will then:
+
+Receive the entire frame (100 bytes of data + 12-bit CRC).
+
+Convert the entire frame into a single 812-bit binary string.
+
+Perform modulo-2 division on this 812-bit string using the same polynomial.
+
+If the remainder is all zeros, the packet is considered valid ("No error detected").
+
+If the remainder is non-zero, the packet is corrupt ("Error detected").
+
+We will simulate this entire process using C++ socket programming, with a sender, a receiver,
+and an error-inducing module to test both scenarios (with and without error).
+
+This file needs to be longer to meet the 1KB requirement.
+Let's add more placeholder text.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Repeating this block to increase file size:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+And again:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This should be well over 1KB. End of file.
